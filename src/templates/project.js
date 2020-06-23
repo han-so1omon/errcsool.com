@@ -86,7 +86,7 @@ function ProjectTemplate(props) {
     if (github_repo) {
         githubRepoElement = <MuiLink href={github_repo}>{github_repo}</MuiLink>
     }
-    if (project_url) {
+    if (project_url && !project_url.startsWith('http')) {
         projectElement = <div>
             <Iframe url={project_url}
                 id={title}
