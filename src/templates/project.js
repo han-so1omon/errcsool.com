@@ -108,14 +108,14 @@ function ProjectTemplate(props) {
     let linkElements
     if (project_url && github_repo) {
         linkElements =
-            <><Grid item xs={6} sm={6} md={4} lg={4} align="center">
+            <><Grid item xs={6} sm={6} md={5} lg={5} align="center">
                 <MuiLink href={project_url}>
                     <Paper classes={{root: classes.paper}} elevation={1}>
                         Project
                     </Paper>
                 </MuiLink>
             </Grid>
-            <Grid item xs={6} sm={6} md={4} lg={4} align="center">
+            <Grid item xs={6} sm={6} md={5} lg={5} align="center">
                 <MuiLink href={github_repo}>
                     <Paper classes={{root: classes.paper}} elevation={1}>
                         Github
