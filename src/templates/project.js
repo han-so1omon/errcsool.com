@@ -66,15 +66,11 @@ const useStyles = makeStyles((theme) => ({
 
 function ProjectTemplate(props) {
     const data = props.data
-    const siteTitle = data.site.siteMetadata.title
-    const socialInfo = data.site.siteMetadata.social
-    const author = data.site.siteMetadata.author
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
-    const resume = ''
 
     const title = data.cosmicjsProjects.title
-    const social = data.site.siteMetadata.social
+    const description = data.cosmicjsProjects.metadata.description
     const github_repo = data.cosmicjsProjects.metadata.github_repo
     const project_url = data.cosmicjsProjects.metadata.project_url
     const demo = data.cosmicjsProjects.metadata.demo.imgix_url
@@ -82,11 +78,8 @@ function ProjectTemplate(props) {
     const classes = useStyles() 
 
     let showDemo = false
-    let githubRepoElement, projectElement, demoElement;
-    if (github_repo) {
-        githubRepoElement = <MuiLink href={github_repo}>{github_repo}</MuiLink>
-    }
-    if (project_url && !project_url.startsWith('http')) {
+    let projectElement, demoElement;
+    if (project_url && !(project_url.startsWith('http') && !project_url.startsWith('https'))) {
         projectElement = <div>
             <Iframe url={project_url}
                 id={title}
@@ -100,6 +93,7 @@ function ProjectTemplate(props) {
     } else if (demo) {
         showDemo = true
         demoElement= <img
+            alt={description}
             width="100%"
             src={demo}
         />
@@ -138,7 +132,6 @@ function ProjectTemplate(props) {
             </Grid>
     }
 
-    console.log(processor.processSync(data.cosmicjsProjects.metadata.content))
     return (
         <div className={classes.root}>
             <Grid container spacing={8} direction="row" justify="space-around" alignItems="center">
@@ -187,8 +180,6 @@ export const query = graphql`
   query($slug: String!) {
       site {
           siteMetadata {
-            title
-            author
             description
             social {
               email

@@ -5,12 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import GithubIcon from '@material-ui/icons/GitHub'
-import EmailIcon from '@material-ui/icons/Email'
-import DescriptionIcon from '@material-ui/icons/Description'
-import MuiLink from '@material-ui/core/Link';
 
-import Link from '../components/Link';
 import Copyright from '../components/Copyright';
 import SocialBar from '../components/SocialBar';
 import Bio from '../components/Bio';
@@ -24,12 +19,10 @@ const useStyles = makeStyles((theme) => ({
 export default function Index(props) {
     const { data } = props;
     const siteTitle = data.site.siteMetadata.title
-    const description = data.site.siteMetadata.description
     const author = data.site.siteMetadata.author
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
     const logo = data.file.childImageSharp.fluid
-    const resume = ''
 
     const classes = useStyles() 
 
@@ -91,7 +84,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
-        description
         social {
           email
           github

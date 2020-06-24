@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql, navigate } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid';
@@ -22,14 +22,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Blog(props) {
     const { data } = props
-    const siteTitle = data.site.siteMetadata.title
-    const socialInfo = data.site.siteMetadata.social
     const posts = data.allCosmicjsPosts.edges
-    const author = data.site.siteMetadata.author
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
-    const logo = data.file.childImageSharp.fluid
-    const resume = ''
 
     const classes = useStyles() 
 
@@ -91,8 +86,6 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
-        author
         description
         social {
           email

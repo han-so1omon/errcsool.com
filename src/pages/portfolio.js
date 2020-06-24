@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql, navigate } from "gatsby"
 import Img from 'gatsby-image'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent'
-import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
-import IconButton from '@material-ui/core/IconButton'
 import GithubIcon from '@material-ui/icons/GitHub'
 import WebIcon from '@material-ui/icons/Web'
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward'
 
 import SocialBar from '../components/SocialBar';
 import Link from '../components/Link';
@@ -47,14 +44,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Portfolio(props) {
     const { data } = props
-    const siteTitle = data.site.siteMetadata.title
-    const socialInfo = data.site.siteMetadata.social
     const projects = data.allCosmicjsProjects.edges
-    const author = data.site.siteMetadata.author
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
-    const logo = data.file.childImageSharp.fluid
-    const resume = ''
 
     const classes = useStyles() 
 
@@ -62,7 +54,7 @@ export default function Portfolio(props) {
         const title = node.title
 
         return (
-            <Grid key={node.slug} item xs={7} align="center">
+            <Grid key={node.slug} item xs={11} sm={7} align="center">
                 <Card className={classes.cardRoot}>
                     <Grid container spacing={2} direction="row" justify="space-around" alignItems="center">
                         <Grid item xs={12}>
@@ -153,8 +145,6 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
-        author
         description
         social {
           email

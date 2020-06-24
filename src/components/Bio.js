@@ -9,7 +9,7 @@ export default function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author} = data.site.siteMetadata
         return (
             <Grid container spacing={0} direction="row" justify="space-around" alignItems="center">
                 <Grid item xs={2} align="center">
@@ -27,7 +27,7 @@ export default function Bio() {
                       }}
                     />
                 </Grid>
-                <Grid item xs={9} sm={9} md={10} align="left">
+                <Grid item xs={6} sm={9} md={10} align="left">
                     <Typography variant="p" component="p" gutterBottom align="left">
                       <strong>{author}</strong>
                       {` - `}
@@ -56,11 +56,6 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
-        social {
-          github
-          email
-          stackoverflow
-        }
       }
     }
   }

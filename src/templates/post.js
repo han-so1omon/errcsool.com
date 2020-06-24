@@ -66,23 +66,13 @@ const useStyles = makeStyles((theme) => ({
 
 function ArticleTemplate(props) {
     const data = props.data
-    const siteTitle = data.site.siteMetadata.title
-    const socialInfo = data.site.siteMetadata.social
-    const author = data.site.siteMetadata.author
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
-    const resume = ''
 
     const title = data.cosmicjsPosts.title
-    const social = data.site.siteMetadata.social
     const github_repo = data.cosmicjsPosts.metadata.github_repo
 
     const classes = useStyles() 
-
-    let githubRepoElement;
-    if (github_repo) {
-        githubRepoElement = <MuiLink href={github_repo}>{github_repo}</MuiLink>
-    }
 
     return (
         <div className={classes.root}>
@@ -130,8 +120,6 @@ export const query = graphql`
   query($slug: String!) {
       site {
           siteMetadata {
-            title
-            author
             description
             social {
               email

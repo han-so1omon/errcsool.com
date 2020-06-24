@@ -1,6 +1,4 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import GithubIcon from '@material-ui/icons/GitHub'
 import EmailIcon from '@material-ui/icons/Email'
