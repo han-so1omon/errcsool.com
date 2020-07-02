@@ -73,9 +73,12 @@ function ProjectTemplate(props) {
     const description = data.cosmicjsProjects.metadata.description
     const github_repo = data.cosmicjsProjects.metadata.github_repo
     const project_url = data.cosmicjsProjects.metadata.project_url
-    const demo = data.cosmicjsProjects.metadata.demo.imgix_url
+    let demo
+    if (data.cosmicjsProjects.metadata.demo) {
+        demo = data.cosmicjsProjects.metadata.demo.imgix_url
+    }
 
-    const classes = useStyles() 
+    const classes = useStyles()
 
     let showDemo = false
     let projectElement, demoElement;
@@ -98,7 +101,7 @@ function ProjectTemplate(props) {
             src={demo}
         />
     }
-    
+
     let linkElements
     if (project_url && github_repo) {
         linkElements =
@@ -145,7 +148,7 @@ function ProjectTemplate(props) {
                 <Grid item xs={10} sm={10} md={8} lg={8} align="center">
                     {projectElement}
                 </Grid>
-                {showDemo && 
+                {showDemo &&
                 <Grid item xs={10} sm={10} md={8} lg={8} align="center">
                     {demoElement}
                 </Grid>
