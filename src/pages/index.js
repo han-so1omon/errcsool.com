@@ -24,7 +24,7 @@ export default function Index(props) {
     const github = data.site.siteMetadata.social.github
     const logo = data.file.childImageSharp.fluid
 
-    const classes = useStyles() 
+    const classes = useStyles()
 
     return (
         <div className={classes.root}>
@@ -39,20 +39,6 @@ export default function Index(props) {
                 <Grid item xs={10}>
                     <Bio/>
                 </Grid>
-                <Grid item xs={10} align="center">
-                    <Image
-                        fluid={logo}
-                        style={{
-                            marginBottom: 0,
-                            minWidth: 50,
-                            maxWidth: 600,
-                            borderRadius: `100%`,
-                        }}
-                        imgStyle={{
-                            borderRadius: `50%`,
-                        }}
-                    />
-                </Grid>
                 <Grid item xs={6} align="center">
                     <Button color="primary" size="large"
                         onClick={() => {navigate("/portfolio/")}}>
@@ -65,7 +51,20 @@ export default function Index(props) {
                         Blog
                     </Button>
                 </Grid>
-                <Grid item xs={12}>
+
+                <Grid item xs={10} align="center">
+                    <Image
+                        fluid={logo}
+                        style={{
+                            marginBottom: 0,
+                            minWidth: 50,
+                            maxWidth: 350,
+                            borderRadius: `100%`,
+                        }}
+                        imgStyle={{
+                            borderRadius: `50%`,
+                        }}
+                    />
                 </Grid>
                 <Grid item xs={12}>
                     <SocialBar github={github} email={email}/>
@@ -91,7 +90,7 @@ export const pageQuery = graphql`
       }
     }
     file (relativePath: {eq: "logo.png"}) {
-        childImageSharp{ 
+        childImageSharp{
             fluid {
                 ...GatsbyImageSharpFluid
             }

@@ -32,7 +32,7 @@ export default function Bio() {
                       <strong>{author}</strong>
                       {` - `}
                       I'm a fullstack engineer, roboticist, amateur musician, amateur adventurer.
-                      I have some good stories.
+                      This is my technical portfolio and blog.
                     </Typography>
                 </Grid>
             </Grid>

@@ -3,10 +3,11 @@ import { graphql, navigate } from "gatsby"
 import Iframe from 'react-iframe'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
+import GithubIcon from '@material-ui/icons/GitHub'
+import WebIcon from '@material-ui/icons/Web'
 
 //import merge from "deepmerge"
 import unified from "unified"
@@ -57,11 +58,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    paper: {
-        margin: theme.spacing(3),
-        backgroundColor: theme.palette.secondary.main,
-        color: theme.palette.primary.main,
-    },
 }))
 
 function ProjectTemplate(props) {
@@ -73,6 +69,7 @@ function ProjectTemplate(props) {
     const description = data.cosmicjsProjects.metadata.description
     const github_repo = data.cosmicjsProjects.metadata.github_repo
     const project_url = data.cosmicjsProjects.metadata.project_url
+    const display_project = data.cosmicjsProjects.metadata.display_project
     let demo
     if (data.cosmicjsProjects.metadata.demo) {
         demo = data.cosmicjsProjects.metadata.demo.imgix_url
@@ -82,7 +79,7 @@ function ProjectTemplate(props) {
 
     let showDemo = false
     let projectElement, demoElement;
-    if (project_url && !(project_url.startsWith('http') && !project_url.startsWith('https'))) {
+    if (display_project && project_url && !(project_url.startsWith('http') && !project_url.startsWith('https'))) {
         projectElement = <div>
             <Iframe url={project_url}
                 id={title}
@@ -94,10 +91,16 @@ function ProjectTemplate(props) {
             />
         </div>
     } else if (demo) {
+        let width
         showDemo = true
+        if (demo.endsWith('gif')) {
+            width = '80%'
+        } else {
+            width = '40%'
+        }
         demoElement= <img
             alt={description}
-            width="100%"
+            width={width}
             src={demo}
         />
     }
@@ -105,39 +108,36 @@ function ProjectTemplate(props) {
     let linkElements
     if (project_url && github_repo) {
         linkElements =
-            <><Grid item xs={6} sm={6} md={5} lg={5} align="center">
+            <>
+            <Grid item xs={5} sm={5} md={5} lg={5} align="center">
                 <MuiLink href={project_url}>
-                    <Paper classes={{root: classes.paper}} elevation={1}>
-                        Project
-                    </Paper>
+                    <WebIcon/>
                 </MuiLink>
             </Grid>
-            <Grid item xs={6} sm={6} md={5} lg={5} align="center">
+            <Grid item xs={3} sm={3} md={3} lg={3} align="left">
                 <MuiLink href={github_repo}>
-                    <Paper classes={{root: classes.paper}} elevation={1}>
-                        Github
-                    </Paper>
+                    <GithubIcon/>
                 </MuiLink>
             </Grid></>
     } else if (github_repo) {
         linkElements =
             <Grid item xs={8} sm={8} md={6} lg={6} align="center">
-                <Paper classes={{root: classes.paper}}>
-                    <MuiLink href={github_repo}>Github</MuiLink>
-                </Paper>
+                    <MuiLink href={github_repo}>
+                        <GithubIcon/>
+                    </MuiLink>
             </Grid>
     } else if (project_url) {
         linkElements =
             <Grid item xs={8} sm={8} md={6} lg={6} align="center">
-                <Paper classes={{root: classes.paper}}>
-                    <MuiLink href={project_url}>Project</MuiLink>
-                </Paper>
+                    <MuiLink href={project_url}>
+                        <WebIcon/>
+                    </MuiLink>
             </Grid>
     }
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={8} direction="row" justify="space-around" alignItems="center">
+            <Grid container spacing={3} direction="row" justify="space-around" alignItems="center">
                 <Grid item xs={12}>
                 </Grid>
                 <Grid item xs={10} align="center">
@@ -200,6 +200,7 @@ export const query = graphql`
             github_repo
             project_url
             description
+            display_project
             tags
             demo {
                 imgix_url

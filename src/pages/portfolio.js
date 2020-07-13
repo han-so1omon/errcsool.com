@@ -20,9 +20,8 @@ const useStyles = makeStyles((theme) => ({
     },
     cardRoot: {
         //display: 'flex',
-        backgroundColor: theme.palette.darkBackground.default,
-        color: 'white',
-        fontWeight: 'bold'
+        backgroundColor: theme.palette.secondary.main,
+        color: theme.palette.text.secondary,
     },
     cardDetails: {
         display: 'flex',
@@ -48,7 +47,7 @@ export default function Portfolio(props) {
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
 
-    const classes = useStyles() 
+    const classes = useStyles()
 
     let portfolioElements = projects.map(({ node }) => {
         const title = node.title
@@ -56,20 +55,24 @@ export default function Portfolio(props) {
         return (
             <Grid key={node.slug} item xs={11} sm={7} align="center">
                 <Card className={classes.cardRoot}>
-                    <Grid container spacing={2} direction="row" justify="space-around" alignItems="center">
+                    <Grid container spacing={0} direction="row" justify="space-around" alignItems="center">
                         <Grid item xs={12}>
                             <CardContent className={classes.cardContent}>
-                                <Link
+                                <h2
+                                  style={{
+                                    marginBottom: 5,
+                                  }}
+                                >
+                                  <Link
                                     style={{ boxShadow: `none` }}
                                     to={`${node.slug}`}
-                                >
-                                    <Typography component="h5" variant="h5" align="center">
-                                        {title}
-                                    </Typography>
-                                </Link>
-                                <Typography component="p" variant="p">
+                                  >
+                                    {title}
+                                  </Link>
+                                </h2>
+                                <p>
                                     {node.metadata.description}
-                                </Typography>
+                                </p>
                             </CardContent>
                         </Grid>
                         <Grid item xs={4}>
@@ -153,7 +156,7 @@ export const pageQuery = graphql`
       }
     }
     file (relativePath: {eq: "logo.png"}) {
-        childImageSharp{ 
+        childImageSharp{
             fluid {
                 ...GatsbyImageSharpFluid
             }

@@ -2,10 +2,10 @@ import React from "react"
 import { graphql, navigate } from "gatsby"
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
+import GithubIcon from '@material-ui/icons/GitHub'
 
 //import merge from "deepmerge"
 import unified from "unified"
@@ -56,11 +56,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    paper: {
-        padding: theme.spacing(2),
-        backgroundColor: theme.palette.secondary.main,
-        color: theme.palette.primary.main,
-    },
 }))
 
 
@@ -72,7 +67,7 @@ function ArticleTemplate(props) {
     const title = data.cosmicjsPosts.title
     const github_repo = data.cosmicjsPosts.metadata.github_repo
 
-    const classes = useStyles() 
+    const classes = useStyles()
 
     return (
         <div className={classes.root}>
@@ -86,9 +81,7 @@ function ArticleTemplate(props) {
                 </Grid>
                 <Grid item xs={8} sm={8} md={6} lg={6} align="center">
                     <MuiLink href={github_repo}>
-                        <Paper classes={{root: classes.paper}}>
-                            Github
-                        </Paper>
+                        <GithubIcon/>
                     </MuiLink>
                 </Grid>
                 <Grid item xs={10} sm={10} md={8} lg={8} align="left">
