@@ -110,13 +110,13 @@ function ProjectTemplate(props) {
         linkElements =
             <>
             <Grid item xs={5} sm={5} md={5} lg={5} align="center">
-                <MuiLink href={project_url}>
-                    <WebIcon/>
+                <MuiLink href={github_repo}>
+                    <GithubIcon/>
                 </MuiLink>
             </Grid>
             <Grid item xs={3} sm={3} md={3} lg={3} align="left">
-                <MuiLink href={github_repo}>
-                    <GithubIcon/>
+                <MuiLink href={project_url}>
+                    <WebIcon/>
                 </MuiLink>
             </Grid></>
     } else if (github_repo) {
