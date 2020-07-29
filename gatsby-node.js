@@ -9,14 +9,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions
 
-    /*
-    const indexPage = path.resolve('./src/pages/index.js')
-    createPage({
-        path: `blog`,
-        component: indexPage,
-    })
-    */
-
     return new Promise((resolve, reject) => {
         const blogPost = path.resolve('./src/templates/post.js')
         const projectPost = path.resolve('./src/templates/project.js')

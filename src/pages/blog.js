@@ -12,6 +12,7 @@ import Link from '../components/Link';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        padding: 32,
     },
     paper: {
         padding: theme.spacing(2),
@@ -26,7 +27,7 @@ export default function Blog(props) {
     const email = data.site.siteMetadata.social.email
     const github = data.site.siteMetadata.social.github
 
-    const classes = useStyles() 
+    const classes = useStyles()
 
     let blogElements = posts.map(({ node }) => {
         const title = node.title
@@ -94,7 +95,7 @@ export const pageQuery = graphql`
       }
     }
     file (relativePath: {eq: "logo.png"}) {
-        childImageSharp{ 
+        childImageSharp{
             fluid {
                 ...GatsbyImageSharpFluid
             }

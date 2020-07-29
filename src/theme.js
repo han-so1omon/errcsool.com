@@ -5,23 +5,20 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#9f82d9',
+      main: '#7b53ca',
     },
     secondary: {
-      main: '#262626',
+      main: '#ffebf1',
     },
     error: {
       main: red.A400,
     },
     background: {
-      default: '#fff0f5',
-    },
-    darkBackground: {
-      default: '#390862',
+      default: '#ffd6e2',
     },
     text: {
         primary: '#000000',
-        secondary: '#767676',
+        secondary: '#262626',
     }
   },
 });

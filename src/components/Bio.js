@@ -11,7 +11,7 @@ export default function Bio() {
       render={data => {
         const { author} = data.site.siteMetadata
         return (
-            <Grid container spacing={0} direction="row" justify="space-around" alignItems="center">
+            <Grid container spacing={8} direction="row" justify="space-around" alignItems="center">
                 <Grid item xs={2} align="center">
                     <Img
                       fixed={data.avatar.childImageSharp.fixed}

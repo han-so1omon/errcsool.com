@@ -13,6 +13,7 @@ import Bio from '../components/Bio';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        padding: 32,
     },
 }))
 
@@ -72,6 +73,7 @@ export default function Index(props) {
                 <Grid item xs={12}>
                     <Copyright author={author} email={email}/>
                 </Grid>
+
             </Grid>
         </div>
     )

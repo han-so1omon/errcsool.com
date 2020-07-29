@@ -17,6 +17,7 @@ import Link from '../components/Link';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        padding: 32,
     },
     cardRoot: {
         //display: 'flex',
