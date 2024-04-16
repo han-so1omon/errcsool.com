@@ -1,26 +1,43 @@
 ---
-date: "2024-03-21T11:40:54.000Z"
+date: '2024-04-16T11:40:54.000Z'
 title: Innovation... Modify or Create New
 tagline: Thoughts on different styles of innovation
 preview: >-
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-  when an unknown printer took a galley of type and scrambled it to make a type
-  specimen book.
+  Innovation follows inspiration. Inspiration comes from recognition, either of
+  something that you have done or something that has been done outside of your
+  involvement
 image: >-
   https://images.unsplash.com/photo-1545199040-e144651a428d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
-
-TODO
-
 # What is Innovation?
+You can do whatever you want, obviously, and while technically everything you do is a new action, only some are considered innovation. In that sense it's sort of a weird ontological concept. Innovation literally means ['introducing something new'](https://www.wordnik.com/words/innovation). How can you do something new that isn't considered as new? I think to answer this we have to look to the social context of newness. For example, you would not consider a rock splitting into two as an innovation even though it leads to a new way for the rock to sit in space. Or a river flowing through the earth to create a canyon would not be an innovation, even though for the conscious mind it inspires some new form of being
+
+Innovation follows inspiration. Inspiration comes from recognition, either of something that you have done or something that has been done outside of your involvement. Further, from the definition, you have to actually introduce something in order for it to qualify as innovation. To conclude this rather drawn out exploration of the topic, I would say that it is important to be mindful of the idea of an introduction as the final, decisive action that leads to innovation. You can use the analogy of the various ways that you might introduce yourself or be introduced to another person to understand why one might consider some other process or concept to be an innovation
 
 ## Relationship between Modifying and Creating New
+The two types of innovation are
+1) "What if we did this instead?"
+2) "What if we did this?"
+
+In the first case, consider the construction of a method to refill an electron hole in an atom to release light to create a light-emitting diode (LED), and thus improve on the design of the incandescent bulb. In the second case, consider something like observing fire and constructing a method to preserve it to create a source of light. Both are amazing, and both are unbelievably useful. Another, more straightforward example. Consider sliced bread versus bread. The former is a modification on an existing process. The latter is an entirely new creation. Both are considered innovations and are celebrated as such
+
+At this point you may be recognizing that it is very rare to create a process entirely new, and that these two options define a range of ingenuity and uniqueness, with some creations skewing more towards one side of the range or the other
+
+One more topic to consider, which likely deserves its own post, is of conformance to a specification versus conformance to a physical law. To myself, I like to call this 'stoplight theory'. With a stoplight, there is technically nothing making you stop. You could just keep going, but by the specification of the process we are all compelled to stop. This has physical implications, such as traffic patterns and subsequent emotional response, but it only has social or interpreted forcing. By comparison, if someone put up a barrier in front of your car, you would stop whether it was your choice or not. Depending on the instance, for example a train passing or a drawbridge, there may be similar physical implications related to the this time physical forcing. Specifications may be derived from physical laws or from something else. They may also be ignorant of physical laws that present important barriers, which can be uncovered during the process of creation
 
 ## When to Modify
+I want to refocus a bit, as this is meant to be a useful guide for thought for those who want to be innovative. When do you modify? Most of the time. Take a familiar process and gently reconfigure the way that this process is accomplished. When you re-introduce the modified process, you do not need to be gentle. You can paint with broad and inspirational strokes, but really you want people to take to the process in a natural way. There should be some assumption that the prior process was a representation of a natural mode of operation, and so a new mode of operation should take the lessons from the old mode and allow people to operate similarly but with slight changes in efficiency, enjoyment, collaborative opportunity, etc.
+
+For example, when the USA began to run out of timber suitable for making plywood, they developed methods for creating oriented-strand board from the early 1960s into the 1980s [[1]](https://www.fpl.fs.usda.gov/documnts/fplgtr/fpl_gtr236.pdf) so that we could continue high-quality construction and use our wood more efficiently. Oriented-strand board is extremely similar in many ways to precursor and competitor products, but has efficiency benefits with respect to which pieces of timber can be used and under what conditions. It also has the necessary physical strengths to be as good or better than what is necessary by modern construction specifications
 
 ## When to Create New
+Creating something completely new is something that happens almost by accident. You should not really look to create something completely new. For one, unless you're from the future, it's really difficult to recognize when something has entirely never been introduced before. The folk tales of Newton and the apple or Edison and the kite should really tell you that observing some fundamental phenomenon for application in a completely new way is almost nonsense
+
+That being said, your experience, while part of a contiguous line of culture, is always novel to you. The biggest insight to consider with respect to creating something new is to lean into your unique perspective. Likely what will happen is you go through the novel process of discovery to understand something that has already been done before. Sometimes, though, you end up creating an efficient process on your own, possibly due to lack of oversight or external approval, but with the same conformance to specification or physical law
+
+One interesting example that skews more in the vein of novel creation is that of [Trilok Gurtu](https://en.wikipedia.org/wiki/Trilok_Gurtu), an Indian percussionist from Mumbai. Trilok loved jazz music, as the story goes. He had never seen it performed, though, so instead of learning to play with a traditional western drum set, he learned with one knee on the ground and with an unconventional arrangement of drums and cymbals. Due to his dedication to this form and his reliance on his own intuition, he is considered one of the best drummers in the world
 
 ## Creativity and Practicality
+The modern dialogue around process management often comes back to risk assessment. This is well-used in the agile project management process, the most popular modern framework for professional, corporate project management. Always consider the expectations of your group with respect to project management and communication. If you are a product architect or a research and development professional, you need to abide by timelines and user experience expectations in order to develop a product that is fit to generate revenue. For that purpose, the conservative approach to innovation is to study and communicate intensively the state of the industry in which you are building, and to propose innovations that are little more than re-implementations of existing product architectures. This alone can amount to a monumental effort. In the field of information technology, consider [OpenStack](https://openstack.org) as a re-implementation of [Amazon Web Services](https://aws.amazon.com/); one that requires a team of hundreds across dozens of areas of technical expertise, but with the small benefit that this innovative product works in more computational environments and may lead to massive cost savings
 
-mention specification / conformance. mention changing an implementation versus creating a new implementation
+Now, on the other hand, don't be a sheep to modern policies and methods. In your project planning or otherwise creation process, if you find something to be a ripe area for development that has the potential to yield useful and game-changing results, factor that in and pursue it. Try something that you don't know how to do. Understand what it means to fail massively and what would be the way to gain the most from taking that risk. Or just do it because you enjoy that experience
