@@ -33,13 +33,13 @@ Consider the comparison of these two frameworks with the example: "when I turn t
 
 *Graph theory version*
 - Vertices: **cold water**, **hot water**
-- Actions: **turn faucet on**, **wait**
+- Edges: **turn faucet on**, **wait**
 
 *Dynamical systems version*
 - Dependent variables: **water temperature**
 - Independent variables: **faucet position**, **time**
 
-## Service Dependencies
+# Service Dependencies
 Now, let's get off of that tangent and get back to the economics. With a sustainable system, what we wish to establish is an environment where the individual participants can benefit from each other in the cases of success and failure, both as individuals and as representatives of an organization within the community. For this post, I will re-use the example of a community with service providers and consumers within a large town or small city (pop ~30,000). Logistically, in that town, assume around half of them are legally and physically able to work
 
 The following questions are important to answer regarding economic sustainability:
@@ -48,8 +48,8 @@ The following questions are important to answer regarding economic sustainabilit
 - What benefit is there to choosing a service within our community versus outside of our community?
 - What happens when something needs repair, such as a business collapses or someone moves away?
 
-**My theory here, which I intend to investigate further over time, is as follows:
->__Communities that can provide all services rooted in the community and efficiently with respect to cross-community dependencies, allow for a high percentage of economic sustainability for individuals and organizations, where sustainability is defined as ability to survive, recover from failure, and pursue opportunities based on motivation rather than necessity__**
+**My theory here, which I intend to investigate further over time, is as follows:**
+>__Communities that can provide all services rooted in the community and efficiently with respect to cross-community dependencies, allow for a high percentage of economic sustainability for individuals and organizations, where sustainability is defined as ability to survive, recover from failure, and pursue opportunities based on motivation rather than necessity__
 
 ## Money Flow and Investments
 Let's say you have the following service providers:
@@ -64,7 +64,7 @@ Let's say you have the following service providers:
 
 Let's start from the perspective of the store owner and derive a couple of potential economic systems
 
-### System 1: Largely externally dependent
+## System 1: Largely externally dependent
 1) The store owner sells products mainly to community members
 2) The store owner hires a web developer from outside the community, who in turn uses Amazon Web Services for technology infrastructure provision
 3) The store owner uses Google Ads for ad services
@@ -74,7 +74,7 @@ Let's start from the perspective of the store owner and derive a couple of poten
 7) The store owner receives investment from a private party outside of the community
 8) The store owner hires employees that live outside of the community
 
-### System 2: Largely internally dependent
+## System 2: Largely internally dependent
 1) The store owner sells products mainly to tourists
 2) The store owner hires a web developer from within the community, who uses a hybrid cloud for technology infrastructure provision
 3) The store owner uses local creators for ad services, who in turn use Instagram and Youtube for content creation
@@ -92,7 +92,7 @@ The second aspect of conversation is that there are some aspects of the store ow
 
 The third interesting topic is that of investment-based ownership. This is one of the most interesting results from a community that is able to act as an economic sink via a distribution of internally dependent service providers. Investment basically allows for mostly passive revenue generation to a stakeholder associated with a service provider. Investment typically relies on very very robust (or otherwise trustworthy) bookkeeping infrastructure, though. This is why the securities exchange commission exists and why a large amount of investments come from capital groups. Local investment groups exist as well, and although I am not certain, I would guess that they typically consist of higher-economic-class individuals, and that there are many fears of legal or otherwise monetary disputes coming from investments from average or lower-economic-class individuals. To conclude my theory here, with much to be explored in the future, I believe that increased investments from investors internal to the community will increase the community's robustness to failure cases as well as provide for more opportunities for explorations on service provision that is based on motivation rather than necessity, including potentially with services that may have otherwise seemed impractical to provide
 
-## Further interesting topics:
+# Further interesting topics:
 - [Estonia economics](https://en.wikipedia.org/wiki/Economy_of_Estonia)
 - [Delaware corporation law](https://en.wikipedia.org/wiki/Delaware_General_Corporation_Law)
 - [Chama (investment)](https://en.wikipedia.org/wiki/Chama_(investment))
